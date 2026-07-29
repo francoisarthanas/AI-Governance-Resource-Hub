@@ -99,4 +99,3 @@ This repository is educational and operational guidance, not legal, audit, certi
 Corrections and high-signal additions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). A proposed link without a use case, authoritative owner, and concrete practitioner action will not be accepted.
 
 Licensed under [CC BY 4.0](LICENSE). External resources retain their own licenses and terms.
-

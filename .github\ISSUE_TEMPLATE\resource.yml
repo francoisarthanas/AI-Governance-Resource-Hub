@@ -1,0 +1,59 @@
+name: Propose a resource
+description: Suggest a high-signal resource that meets the curation standard
+title: "Resource: "
+labels: [resource]
+body:
+  - type: markdown
+    attributes:
+      value: Please read the curation policy first. A link without a concrete practitioner use will not be accepted.
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher and version/date
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Gap this fills
+      description: Which decision, control, test, or evidence gap does it address better than current entries?
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: Practitioner action
+      description: What should a practitioner do after using it?
+    validations:
+      required: true
+  - type: dropdown
+    id: access
+    attributes:
+      label: Access
+      options: [Free, Paid, Freemium, Mixed]
+    validations:
+      required: true
+  - type: textarea
+    id: maintenance
+    attributes:
+      label: Maintenance and conflicts
+      description: Evidence it is maintained and any vendor, commercial, or other conflicts.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the catalog and existing issues for duplicates.
+          required: true
+        - label: I am not submitting an affiliate or sponsored link.
+          required: true
+

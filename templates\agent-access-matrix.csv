@@ -1,0 +1,4 @@
+agent_or_workflow,environment,resource_or_tool,action,identity,credential_type,scope_or_constraint,approval_required,approver,logging_required,kill_switch_owner,review_date,status
+example-support-agent,production,customer-records,read,svc-support-agent,short-lived workload token,assigned-account only,no,,yes,platform-security,YYYY-MM-DD,draft
+example-support-agent,production,refund-api,execute,svc-support-agent,short-lived workload token,maximum USD 100 per transaction,yes,shift-supervisor,yes,platform-security,YYYY-MM-DD,draft
+
