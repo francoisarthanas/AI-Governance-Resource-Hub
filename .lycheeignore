@@ -1,0 +1,6 @@
+# These authoritative sites reject or break GitHub-hosted automated HTTP clients.
+# They remain covered by scripts/check_links.py and manual official-source review.
+^https://www\.canada\.ca/
+^https://www\.digital\.gov\.au/
+^https://www\.industry\.gov\.au/
+^https://www\.fda\.gov/
