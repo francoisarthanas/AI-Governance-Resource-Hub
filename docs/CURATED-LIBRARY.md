@@ -106,7 +106,7 @@ The machine-readable version, with tags and access notes, is [`catalog/resources
 |---|---|
 | Banking | [US interagency Revised Guidance on Model Risk Management (SR 26-2)](https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm); map AI governance into established model-risk and third-party processes |
 | Insurance | [NAIC Model Bulletin on AI Systems](https://content.naic.org/article/naic-members-approve-model-bulletin-use-ai-insurers); confirm adoption and state-specific requirements |
-| Medical devices | [FDA Digital Health Guidance list](https://www.fda.gov/medical-devices/digital-health-center-excellence/guidances-digital-health-content) and [Good Machine Learning Practice principles](https://www.fda.gov/media/153486/download) |
+| Medical devices | [FDA Digital Health Guidance list](https://www.fda.gov/medical-devices/digital-health-center-excellence/guidances-digital-health-content) and [Good Machine Learning Practice principles](https://www.fda.gov/medical-devices/software-medical-device-samd/good-machine-learning-practice-medical-device-development-guiding-principles) |
 | Employment | [EEOC Employment Tests and Selection Procedures](https://www.eeoc.gov/laws/guidance/employment-tests-and-selection-procedures); also check state/local and EU rules |
 | Government | [Canada AIA](https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/algorithmic-impact-assessment.html), [GAO framework](https://www.gao.gov/products/gao-21-519sp), and [Australian AI standard](https://www.digital.gov.au/policy/ai/AI-technical-standard) |
 

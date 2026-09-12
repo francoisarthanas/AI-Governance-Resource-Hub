@@ -15,13 +15,13 @@ jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
             --verbose --no-progress --max-retries 3
-            --accept 200,204,206,301,302,303,307,308,401,403,429
+            --exclude-file .lycheeignore
+            --accept 200,202,204,206,301,302,303,307,308,401,403,429
             './**/*.md' './catalog/resources.json'
           fail: true
-
