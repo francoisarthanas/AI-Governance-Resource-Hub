@@ -1,9 +1,6 @@
-name: Link check
+name: Weekly link report
 
 on:
-  push:
-    branches: [main]
-  pull_request:
   schedule:
     - cron: "23 9 * * 1"
   workflow_dispatch:
@@ -14,14 +11,17 @@ permissions:
 jobs:
   links:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
-      - name: Check links
-        uses: lycheeverse/lychee-action@v2
+      - uses: actions/setup-python@v6
         with:
-          args: >-
-            --verbose --no-progress --max-retries 3
-            --exclude-file .lycheeignore
-            --accept 200,202,204,206,301,302,303,307,308,401,403,429
-            './**/*.md' './catalog/resources.json'
-          fail: true
+          python-version: "3.12"
+      - name: Check external reachability without changing the catalog
+        run: python scripts/check_links.py --report-only --json reports/link-check.json --markdown reports/link-check.md
+      - name: Publish review report in workflow summary
+        if: always()
+        run: |
+          if [ -f reports/link-check.md ]; then
+            cat reports/link-check.md >> "$GITHUB_STEP_SUMMARY"
+          fi

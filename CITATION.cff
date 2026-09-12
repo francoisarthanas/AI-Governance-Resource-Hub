@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If this hub materially supports your work, cite the repository and the original sources you use."
-title: "AI Governance Resource Hub"
+title: "AI & Agentic AI Governance Resource Hub"
 type: dataset
 authors:
   - family-names: "Arthanas"
@@ -8,6 +8,7 @@ authors:
 repository-code: "https://github.com/francoisarthanas/AI-Governance-Resource-Hub"
 url: "https://github.com/francoisarthanas/AI-Governance-Resource-Hub"
 license: CC-BY-4.0
-version: 1.0.0
-date-released: 2026-07-29
+version: 2.0.0
+date-released: 2026-09-12
+
 

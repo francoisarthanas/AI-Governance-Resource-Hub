@@ -15,5 +15,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Validate repository
+      - name: Validate catalog and local links
         run: python scripts/validate.py
+      - name: Check generated category pages
+        run: python scripts/generate_catalog.py --check

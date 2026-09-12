@@ -1,108 +1,89 @@
-# Start Here: From Zero to a Governed AI Use Case
+# Start here
 
-This is the shortest credible path. It creates control without making every experiment wait for a committee.
+[← Resource hub](../README.md)
 
-## The first 60 minutes
+Choose the path that matches your next task. These are suggested learning sequences, not certifications or universal compliance checklists. Reading and reviewing the references requires no coding; running the technical tools may.
 
-### 1. Name one accountable owner
+## If you have one hour
 
-Choose the person who owns the business outcome and can accept, reduce, or reject risk. A project manager, vendor, model, or “the AI team” is not an accountable owner.
+Use the hour to orient yourself and record questions, rather than trying to finish every source.
 
-### 2. Put the system in the inventory
+1. **10 minutes:** Watch the [NIST AI RMF explainer](LEARNING.md#nist-rmf-video) and identify the four functions.
+2. **15 minutes:** Skim the executive summary and four dimensions of the [IMDA agentic framework](AGENTIC.md#imda-agentic-framework).
+3. **15 minutes:** Choose one relevant case in the [AI Incident Database](RESEARCH.md#ai-incident-database) and inspect the underlying report.
+4. **20 minutes:** Write down the system's purpose, affected people, accountable owner, allowed actions, required approvals, and evidence still missing.
 
-Copy [`templates/ai-inventory.csv`](../templates/ai-inventory.csv). Record the use case, owner, users, affected people, deployment status, model/provider, data classes, decision impact, geography, and whether it can act.
+The time boxes are suggested study allocations, not source runtimes.
 
-Inventory at the **use-case/system** level, not only the model level. One model can power many differently risky uses. Also capture embedded vendor AI, employee tools, retrieval systems, fine-tunes, APIs, automations, and agents.
+## Learn the foundations
 
-### 3. Decide whether AI is appropriate
+For newcomers, career changers, and colleagues who need a shared vocabulary.
 
-Complete [`templates/ai-use-case-intake.md`](../templates/ai-use-case-intake.md). Ask:
+| Step | Use this resource | Put it into practice |
+|---|---|---|
+| 1. Understand responsibilities and impacts | [University of Helsinki: Ethics of AI](LEARNING.md#ethics-of-ai) | Identify who benefits from an AI use case and who could be harmed. |
+| 2. Organize risk management | [NIST AI RMF and Playbook](FOUNDATIONS.md#nist-ai-rmf) | Write one practical question under Govern, Map, Measure, and Manage. |
+| 3. Challenge capability claims | [AI Snake Oil](BOOKS.md#ai-snake-oil-book) | Ask what evidence separates a persuasive demonstration from a suitable deployment. |
+| 4. Understand assurance | [Introduction to AI Assurance](FOUNDATIONS.md#ai-assurance) | Distinguish a provider claim, a test result, an assessment, and independent review. |
+| 5. Learn from failure | [AI Incident Database](RESEARCH.md#ai-incident-database) | Explain which decision or control assumption failed in one reported case. |
 
-- What measurable problem are we solving?
-- Could a deterministic rule, ordinary automation, or process change solve it more safely?
-- Who benefits, who can be harmed, and who can contest the result?
-- What happens when it is wrong, unavailable, manipulated, or misused?
-- Is the proposed human review timely, informed, empowered, and realistic at expected volume?
+**Finish with:** a one-page explanation of a use case, its affected people, its main risks, and the evidence you would request.
 
-### 4. Triage the risk
+For readers pursuing the professional credential, [IAPP AIGP training](LEARNING.md#aigp-training) is a paid structured option. It is not a prerequisite for using this hub.
 
-Escalate the use case when any answer is “yes”:
+## Build a governance program
 
-- It affects rights, access, eligibility, employment, credit, insurance, healthcare, education, law enforcement, essential services, safety, or critical infrastructure.
-- It uses sensitive, confidential, regulated, biometric, children's, or third-party data.
-- It profiles people, infers sensitive traits, or produces consequential recommendations.
-- It is public-facing at scale or can create convincing content in a high-impact context.
-- It is hard to reverse, explain, contest, or correct.
-- It can call tools, spend money, send communications, change records, write code, operate equipment, create sub-agents, or delegate work.
-- The provider, data provenance, model behavior, or supply chain is insufficiently transparent.
+For GRC teams, governance leads, auditors, and risk owners.
 
-High risk is not automatically “no.” It means stronger expertise, evidence, approvals, safeguards, testing, monitoring, and sometimes a legal prohibition.
+| Step | Use this resource | Put it into practice |
+|---|---|---|
+| 1. Establish the management structure | [ISO/IEC 42001](FOUNDATIONS.md#iso-42001) and [NIST AI RMF](FOUNDATIONS.md#nist-ai-rmf) | Define responsibilities, risk decisions, evidence owners, and management review. |
+| 2. Assess impacts and suppliers | [OECD Due Diligence Guidance](FOUNDATIONS.md#oecd-due-diligence) | Follow adverse impacts through the value chain, including suppliers and remediation. |
+| 3. Learn from real documentation | [UK Algorithmic Transparency Recording Standard](FOUNDATIONS.md#uk-atrs) and [Canada AIA](FOUNDATIONS.md#canada-aia) | Compare actual published records before designing your inventory and assessment fields. |
+| 4. Check relevant requirements | [EU AI Act](FOUNDATIONS.md#eu-ai-act) and [ICO toolkit](FOUNDATIONS.md#ico-toolkit) | Establish jurisdiction, organizational role, applicability, and unresolved legal questions. |
+| 5. Design a review that leaves evidence | [Closing the AI Accountability Gap](RESEARCH.md#internal-algorithmic-auditing) | Specify audit documents and who reviews them across the lifecycle. |
 
-### 5. Set the release conditions
+**Finish with:** a clear intake-to-review process, assigned owners, and a list of evidence needed for one deployment decision. The UK and Canadian examples are reusable models; their mandates do not automatically apply outside their stated scope.
 
-For a low-risk pilot, require at least:
+Use [VerifyWise](TOOLS.md#verifywise) if you need a workspace to organize this information. The governance decisions still require accountable people.
 
-- a named owner and approved users;
-- an explicit purpose and prohibited-use boundary;
-- approved data classes and retention rules;
-- a non-production or contained environment;
-- representative acceptance tests and recorded results;
-- a feedback and incident route;
-- a stop date or review date;
-- no unreviewed consequential or irreversible actions.
+## Review an AI agent
 
-For anything higher risk, complete the impact assessment and obtain the relevant legal, privacy, security, safety, accessibility, records, procurement, domain, and affected-stakeholder reviews.
+For anyone assessing an agent that can call tools, change records, communicate, spend money, or delegate.
 
-## If the system is an agent
+| Step | Use this resource | Put it into practice |
+|---|---|---|
+| 1. Bound what it can do | [IMDA agentic framework](AGENTIC.md#imda-agentic-framework) | Record the allowed actions, permissions, autonomy, and reversibility of consequences. |
+| 2. Define meaningful human control | [Practices for Governing Agentic AI Systems](AGENTIC.md#governing-agentic-systems) | Identify required approvals, escalation paths, interruption, and accountable owners. |
+| 3. Inspect delegation | [Intelligent AI Delegation](AGENTIC.md#intelligent-delegation) | Explain what authority passes at a human-agent or agent-agent handoff. Treat the paper as a proposed framework. |
+| 4. Define evidence and its limits | [Visibility into AI Agents](AGENTIC.md#agent-visibility) | Specify the identifiers, action records, oversight context, and privacy protections a reviewer needs. |
+| 5. Check behavior and affected users | [Demystifying Evals for AI Agents](AGENTIC.md#agent-evals) and [The Ethics of Advanced AI Assistants](AGENTIC.md#ethics-ai-assistants) | Connect evaluations to authorized outcomes and examine impacts beyond cybersecurity. |
 
-Treat it as an active workload and a delegated identity—not as a chatbot with a longer prompt.
+**Finish with:** an explanation of what the agent may do, what requires approval, how control can be withdrawn, and what evidence supports those claims. A successful task completion is only one part of that decision.
 
-Before it touches a real system:
+## Test controls and review evidence
 
-1. Give it a unique identity; do not share a human or blanket service account.
-2. Allow only named tools and the smallest task-specific scopes.
-3. Use short-lived, audience-bound credentials; never place secrets in prompts or memory.
-4. Default to read-only. Put human approval before external, privileged, financial, destructive, legal, safety, or irreversible actions.
-5. Cap steps, runtime, retries, recursion, spend, tokens, calls, and delegation depth.
-6. Isolate execution and constrain network/file access.
-7. Validate tool inputs and outputs independently of the model.
-8. Log the request, model/version, policy decision, tool calls, approvals, state changes, and outcome. Do not rely on hidden chain-of-thought.
-9. Test prompt injection, poisoned context, tool spoofing, memory poisoning, privilege escalation, runaway loops, and failure recovery.
-10. Prove that operators can pause, revoke, roll back, contain, and recover.
+For cybersecurity practitioners and reviewers working with technical teams.
 
-Use the full [Agentic AI Governance guide](AGENTIC-AI-GOVERNANCE.md).
+| Step | Use this resource | Put it into practice |
+|---|---|---|
+| 1. Identify relevant threats | [OWASP Agentic Top 10](SECURITY.md#owasp-agentic-top10) and [MITRE ATLAS](SECURITY.md#mitre-atlas) | Build a short attack path relevant to the agent's actual tools and permissions. |
+| 2. Review tool trust boundaries | [MCP Security Best Practices](SECURITY.md#mcp-security) and [the lethal trifecta](SECURITY.md#lethal-trifecta) | Examine how untrusted content might interact with private data and external communication. |
+| 3. Choose the right test method | [PyRIT](TOOLS.md#pyrit), [Promptfoo](TOOLS.md#promptfoo), or [Inspect AI](TOOLS.md#inspect-ai) | Select targeted adversarial testing, regression checks, or full agent-task evaluation. Start with one. |
+| 4. Inspect what happened | [Phoenix](TOOLS.md#phoenix) or the selected evaluator's own logs | Review actions and outcomes; explicitly capture authority and approval context where ordinary traces omit it. |
+| 5. Check who experiences failure | [Fairlearn](TOOLS.md#fairlearn) and [Fairness and Machine Learning](BOOKS.md#fairness-book) | Assess relevant subgroup outcomes and explain the limits of chosen metrics. |
 
-## The first week
+**Finish with:** a scoped test objective, acceptance criteria, observed results, limitations, and evidence from a remediation retest. Run adversarial exercises in an authorized test environment.
 
-- Appoint an executive sponsor and day-to-day governance lead.
-- Publish one intake path and one temporary acceptable-use standard.
-- Start an inventory campaign across procurement, SSO/CASB logs, expense data, engineering, data science, SaaS owners, and staff declarations.
-- Define three or four risk tiers with service-level targets and decision authority.
-- Select a program backbone: usually NIST AI RMF; add ISO/IEC 42001 if a management system or certification is a goal.
-- Reuse privacy, cyber, model risk, product safety, legal, procurement, records, and internal-audit processes instead of building a parallel universe.
-- Select two live use cases: one low-risk pathfinder and one meaningful higher-risk case.
+## Try one practical exercise
 
-## Avoid these common failures
+| Exercise | Resource | Useful output |
+|---|---|---|
+| Review a real system record without coding | [UK ATRS](FOUNDATIONS.md#uk-atrs) | Five unanswered governance questions grounded in an actual published record |
+| Reconstruct a reported AI failure | [AI Incident Database](RESEARCH.md#ai-incident-database) | A timeline separating reported facts, missing evidence, and possible control failures |
+| Compare an agent attack with a defense | [AgentDojo](TOOLS.md#agentdojo) | A comparison of legitimate task success and attack success; published examples can be studied before running code |
+| Inspect an LLM safety test | [Project Moonshot](TOOLS.md#moonshot) | A test report with a plain-language explanation of coverage and limitations |
+| Review a supplier's model documentation | [Model Cards](RESEARCH.md#model-cards) | A list of intended uses, exclusions, evaluation gaps, and follow-up evidence requests |
 
-- **A principles-only program:** values without gates, owners, tests, and evidence do not control anything.
-- **A model-only inventory:** risk depends on context, users, data, integrations, and decisions.
-- **“Human in the loop” as a label:** reviewers need time, competence, information, authority, and a workable override path.
-- **One-time approval:** model, data, prompt, tool, provider, permission, and context changes can invalidate the decision.
-- **Prompt-only guardrails:** agents require independent authorization, isolation, validation, observability, and containment.
-- **Compliance by crosswalk:** mappings help reuse controls; they do not prove legal conformity or standard certification.
-- **A giant board for every use:** low-risk experiments need a fast lane; high-risk systems need real multidisciplinary challenge.
+Choose an exercise that fits your access and skills. The goal is a better governance judgment backed by evidence.
 
-## Your minimum outputs
-
-At the end of initial review, you should have:
-
-- one inventory record;
-- a completed intake and risk tier;
-- a system card and impact assessment proportional to risk;
-- documented approval, conditions, and residual risk owner;
-- test plan and results tied to real requirements;
-- monitoring, incident, change, and retirement triggers;
-- supplier evidence and contract protections where applicable;
-- agent access, action, memory, budget, and shutdown evidence where applicable.
-
-Continue with the [90-day implementation playbook](IMPLEMENTATION-PLAYBOOK.md).

@@ -1,101 +1,92 @@
-# AI Governance Resource Hub
+# AI & Agentic AI Governance Resource Hub
 
-> A practitioner-first, vendor-neutral field guide for governing AI systems and AI agents—from first inventory to production assurance.
+**The essential resources for understanding, assessing, and governing AI systems and the agents that act on our behalf.**
 
-[![Link check](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/actions/workflows/links.yml/badge.svg)](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/actions/workflows/links.yml)
-[![Catalog validation](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/actions/workflows/validate.yml/badge.svg)](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/actions/workflows/validate.yml)
-[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](LICENSE)
+Curated for GRC and cybersecurity professionals, governance leaders, auditors, researchers, and anyone entering the field. Find authoritative frameworks, practical tools, research, courses, videos, podcasts, and books—with a clear reason to use each one.
 
-**Last verified:** 29 July 2026 · **Scope:** enterprise and public-sector AI governance, including generative and agentic AI · **No sponsored links**
+**57 selected resources · 8 collections · Reviewed 12 September 2026**
 
-This is not a directory of everything ever written about responsible AI. It is the smaller set of resources, controls, tools, and working documents that a governance lead can use at work.
+[Start here](docs/START-HERE.md) · [The essential ten](#the-essential-ten) · [Browse the collections](#browse-the-collections) · [Contribute](CONTRIBUTING.md)
 
-## Start here
+## Start with your goal
 
-If you have one hour:
+| I want to… | Start here |
+|---|---|
+| Understand AI governance without a technical background | [Beginner learning path](docs/START-HERE.md#learn-the-foundations) |
+| Build or improve an AI governance program | [Governance and assurance path](docs/START-HERE.md#build-a-governance-program) |
+| Govern an agent's authority, actions, and human oversight | [Agent governance path](docs/START-HERE.md#review-an-ai-agent) |
+| Test controls and investigate agent behavior | [Security and evaluation path](docs/START-HERE.md#test-controls-and-review-evidence) |
+| Find something worthwhile to watch or listen to | [Selected videos, courses, and podcast episodes](docs/LEARNING.md) |
+| Follow developments that matter | [Reports, newsletters, research, and emerging standards](docs/UPDATES.md) |
 
-1. Read the [Start Here guide](docs/START-HERE.md).
-2. Copy the [AI inventory](templates/ai-inventory.csv) and record every known use case, model, vendor feature, and agent.
-3. Run the [AI use-case intake](templates/ai-use-case-intake.md) on one live use case.
-4. For an agent, also complete the [agentic risk assessment](templates/agentic-risk-assessment.md) and [access matrix](templates/agent-access-matrix.csv).
-5. Do not approve production until the [go-live checklist](templates/go-live-checklist.md) has an accountable sign-off and linked evidence.
+New to the field? Begin with the free [NIST explainer video](docs/LEARNING.md#nist-rmf-video) and [University of Helsinki Ethics of AI course](docs/LEARNING.md#ethics-of-ai). You can complete the governance reading paths without writing code.
 
-If you are building a program, follow the [90-day implementation playbook](docs/IMPLEMENTATION-PLAYBOOK.md). If an agent can call tools or change state, begin with the [Agentic AI Governance guide](docs/AGENTIC-AI-GOVERNANCE.md).
+## The essential ten
 
-## The essential shelf
+These ten are the starting shelf. Choose the resources relevant to your role; the collections below add depth and alternative learning formats.
 
-Read these before buying a governance platform or inventing a framework.
-
-| Resource | Use it for | Do this next |
+| Resource | Why start with it? | Access |
 |---|---|---|
-| [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) + [Playbook](https://airc.nist.gov/airmf-resources/playbook/) | The program backbone: Govern, Map, Measure, Manage | Select outcomes that fit your risk and context; do not turn the whole playbook into a checklist |
-| [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) | GenAI risks and actions | Add the relevant actions to design review, testing, incident response, and supplier review |
-| [ISO/IEC 42001](https://www.iso.org/standard/81230.html) | Auditable AI management system | Use when you need management-system rigor or certification; the standard text is paid |
-| [ISO/IEC 42005](https://www.iso.org/standard/42005) | Repeatable AI system impact assessments | Use alongside—not instead of—your legal, privacy, security, and human-rights assessments |
-| [OECD AI Principles](https://oecd.ai/en/principles) + [classification framework](https://oecd.ai/en/p/classification) | Common vocabulary and system classification | Use its dimensions to make your inventory and risk tiers consistent |
-| [EU AI Act official text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) + [official Service Desk](https://ai-act-service-desk.ec.europa.eu/en) | EU obligations and implementation tools | Determine role, scope, and risk category with counsel; use the official checker as orientation, not legal advice |
-| [CSA AI Controls Matrix v1.1](https://cloudsecurityalliance.org/artifacts/ai-controls-matrix-v1-1) | A detailed, vendor-neutral cloud AI control catalog | Map existing cloud/security controls before creating new ones |
-| [NCSC/CISA secure AI development guidelines](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development) | Secure design, development, deployment, and operations | Put the guidance into your SDLC and supplier requirements |
-| [Singapore Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) | The agent governance foundation | Apply its four dimensions to responsibility, technical controls, lifecycle activity, and end-user responsibility |
-| [Joint guidance: Careful Adoption of Agentic AI Services](https://www.cyber.gc.ca/en/news-events/joint-guidance-careful-adoption-agentic-artificial-intelligence-services) | Security baseline for agent adoption | Start small, constrain privileges, monitor actions, and plan containment before connecting real systems |
-| [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | Agent threat modeling and testing | Map each applicable threat to a preventive control, test, signal, and response owner |
-| [Australian Government Agentic AI Addendum](https://www.digital.gov.au/policy/ai/agentic-ai-addendum-introduction) | An unusually concrete lifecycle control set | Reuse the criteria for memory, orchestration, evaluation, observability, shutdown, and accountability |
+| [NIST AI RMF and Playbook](https://www.nist.gov/itl/ai-risk-management-framework) | Organize governance around Govern, Map, Measure, and Manage. [How to use it](docs/FOUNDATIONS.md#nist-ai-rmf). | Free |
+| [NIST Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence) | Add risks and actions specific to generative AI. [Details](docs/FOUNDATIONS.md#nist-genai-profile). | Free |
+| [ISO/IEC 42001](https://www.iso.org/standard/42001) | Understand the requirements of an organizational AI management system. [Scope](docs/FOUNDATIONS.md#iso-42001). | Overview free; standard paid |
+| [EU AI Act: official consolidated text](https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng) | Check applicable roles, obligations, and implementation dates at the source. [Scope and status](docs/FOUNDATIONS.md#eu-ai-act). | Free |
+| [IMDA Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) | Connect agent permissions, human accountability, controls, and user responsibilities. [Details](docs/AGENTIC.md#imda-agentic-framework). | Free |
+| [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | Turn agent-specific security risks into review questions and tests. [Details](docs/SECURITY.md#owasp-agentic-top10). | Free |
+| [UK DSIT: Introduction to AI Assurance](https://www.gov.uk/government/publications/introduction-to-ai-assurance) | Understand which assurance techniques can support a claim about an AI system. [Details](docs/FOUNDATIONS.md#ai-assurance). | Free |
+| [Anthropic: Demystifying Evals for AI Agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) | Understand tasks, repeated trials, graders, traces, and actual outcomes. [Scope](docs/AGENTIC.md#agent-evals). | Free |
+| [MIT AI Risk Repository](https://airisk.mit.edu/risks) | Discover relevant risks and follow them back to the literature. [Details](docs/RESEARCH.md#mit-risk-repository). | Free |
+| [AI Incident Database](https://incidentdatabase.ai/) | Learn from reported failures and their underlying evidence. [How to use cases](docs/RESEARCH.md#ai-incident-database). | Free |
 
-## What good looks like
+## Browse the collections
 
-A functioning program can answer these questions with evidence—not slides:
+Every entry includes **why it earns a place, what to do with it, its audience, access terms, version or status, and source-review notes.**
 
-- What AI do we use, who owns it, what can it affect, and where does its data go?
-- Which uses are prohibited, which need review, and who has authority to accept residual risk?
-- What changed since the last approval: model, prompt, data, tool, permission, workflow, or law?
-- How was the system tested for its real users, context, failure modes, misuse, and adversarial behavior?
-- What do we monitor, who responds, and how can we stop, revoke, roll back, notify, and recover?
-- For every agent: whose authority is it exercising, with which identity, credentials, tools, memory, budgets, and human approval gates?
+| Collection | What you will find | Resources |
+|---|---|---:|
+| [Governance foundations](docs/FOUNDATIONS.md) | NIST, ISO, OECD, UNESCO, EU law, privacy, impact assessment, and real public-sector documentation examples | 12 |
+| [Agentic AI governance](docs/AGENTIC.md) | Delegated authority, meaningful oversight, agent visibility, assistant ethics, and evaluation methods | 7 |
+| [AI and agent security](docs/SECURITY.md) | OWASP's LLM and agent lists, MITRE ATLAS, government guidance, MCP security, and threat modeling | 8 |
+| [Projects and practical tools](docs/TOOLS.md) | Governance workspaces, assurance, red teaming, regression tests, agent traces, fairness, and a hands-on benchmark | 10 |
+| [Research and evidence](docs/RESEARCH.md) | Internal algorithmic auditing, model cards, dataset documentation, risk literature, and reported incidents | 5 |
+| [Courses, videos, and podcasts](docs/LEARNING.md) | Two courses, three video selections, and two focused governance podcast episodes | 7 |
+| [Books worth reading](docs/BOOKS.md) | AI Snake Oil, The Alignment Problem, and the free Fairness and Machine Learning textbook | 3 |
+| [Sources to follow](docs/UPDATES.md) | Stanford AI Index, IAPP, GovAI, critical analysis, and clearly labeled emerging NIST identity work | 5 |
 
-The operating loop is:
+## Choose a tool by the evidence you need
 
-```text
-Discover -> Triage -> Assess -> Decide -> Build controls -> Verify -> Release -> Monitor -> Respond/Change/Retire
-```
+You do not need to install every tool. Pick the one that serves the review you are conducting.
 
-Every gate should produce durable evidence. See [Operating Model](docs/OPERATING-MODEL.md), [Evidence & Metrics](docs/EVIDENCE-AND-METRICS.md), and the [control baseline](catalog/control-baseline.csv).
+| Your task | Selected resource |
+|---|---|
+| Organize inventory, ownership, risks, and review evidence | [VerifyWise](docs/TOOLS.md#verifywise) |
+| Test conventional machine-learning models | [AI Verify Toolkit](docs/TOOLS.md#ai-verify) |
+| Run guided LLM safety testing and inspect reports | [Project Moonshot](docs/TOOLS.md#moonshot) |
+| Build repeatable adversarial conversations | [Microsoft PyRIT](docs/TOOLS.md#pyrit) |
+| Scan for a broad set of LLM vulnerabilities | [NVIDIA garak](docs/TOOLS.md#garak) |
+| Recheck behavior after model, prompt, or application changes | [Promptfoo](docs/TOOLS.md#promptfoo) |
+| Evaluate complete tool-using agent tasks in a sandbox | [Inspect AI](docs/TOOLS.md#inspect-ai) |
+| Inspect traces, annotate failures, and compare runs | [Arize Phoenix](docs/TOOLS.md#phoenix) |
+| Study prompt-injection attacks and defenses in a controlled benchmark | [AgentDojo](docs/TOOLS.md#agentdojo) |
+| Assess outcomes and error rates across relevant groups | [Fairlearn](docs/TOOLS.md#fairlearn) |
 
-## Pick your path
+The tool collection identifies technical prerequisites and licensing differences. Source-available software, open-source software, and a free hosted service have different terms. Model API calls and infrastructure can cost money even when a tool has no license fee.
 
-| You are… | Begin with… | Then use… |
-|---|---|---|
-| Establishing governance | [Start Here](docs/START-HERE.md) | [90-day playbook](docs/IMPLEMENTATION-PLAYBOOK.md), [operating model](docs/OPERATING-MODEL.md) |
-| Governing agents | [Agentic AI Governance](docs/AGENTIC-AI-GOVERNANCE.md) | [agentic assessment](templates/agentic-risk-assessment.md), [access matrix](templates/agent-access-matrix.csv), [agent evaluation plan](templates/agent-evaluation-plan.md) |
-| Reviewing a use case | [Use-case intake](templates/ai-use-case-intake.md) | [impact assessment](templates/ai-impact-assessment.md), [system card](templates/ai-system-card.md), [go-live checklist](templates/go-live-checklist.md) |
-| Buying AI | [Procurement & Third Parties](docs/PROCUREMENT.md) | [vendor questionnaire](templates/vendor-due-diligence.md), [contract checklist](templates/contract-clauses-checklist.md) |
-| Testing or red teaming | [Tools & Test Stack](docs/TOOLS-AND-TESTING.md) | [evaluation plan](templates/evaluation-plan.md), [incident report](templates/ai-incident-report.md) |
-| Tracking rules | [Regulatory Map](docs/REGULATORY-MAP.md) | Official sources and qualified counsel in every applicable jurisdiction |
-| Learning the field | [Learning Path](docs/LEARNING-PATH.md) | [Curated Library](docs/CURATED-LIBRARY.md) |
-| Auditing a program | [Evidence & Metrics](docs/EVIDENCE-AND-METRICS.md) | [IIA AI Auditing Framework](https://www.theiia.org/en/content/tools/professional/2023/the-iias-updated-ai-auditing-framework), [GAO accountability framework](https://www.gao.gov/products/gao-21-519sp) |
+## How this collection is curated
 
-## Repository map
+A resource must help someone understand a consequential issue, make a governance decision, perform an assessment, test a control, or produce useful evidence. Original publications and official project documentation take priority. Resources with overlapping purposes must justify their place.
 
-```text
-docs/                  Opinionated practitioner guides
-templates/             Editable intake, assessment, approval, and response artifacts
-catalog/resources.json Machine-readable curated resource catalog
-catalog/control-baseline.csv  Minimum control objectives and evidence
-scripts/validate.py    Dependency-free structural and catalog checks
-.github/workflows/     Automated catalog and link checking
-```
+The collection combines global foundations with selected jurisdiction-specific references. Legal scope, paid access, older foundational work, vendor authorship, and draft status are labeled. A proposed framework is not treated as an established standard.
 
-## Curation standard
+**Reviewed** means the cited source or publisher record was inspected for relevance, identity, access, and material status. Source notes state limits such as an unreviewed paid text or untested video playback. Tool inclusion does not mean the software has been independently audited or executed. Automated link availability is tracked separately from source review.
 
-A resource is included only when it has a clear owner, direct practitioner value, and a reason to be used. Primary sources beat summaries. Maintained resources beat abandoned projects. Free and open material is preferred; paid standards are labeled. Vendor resources are included only when they are concrete enough to reuse or inspect, and never as proof that the vendor's own product is safe.
-
-Each catalog entry states **why it matters** and **what to do with it**. See the full [curation policy](CONTRIBUTING.md#curation-policy) and [machine-readable catalog](catalog/resources.json).
-
-## Important limits
-
-This repository is educational and operational guidance, not legal, audit, certification, cybersecurity, or procurement advice. Laws, standards, and tools change. Validate applicability and current versions with the responsible experts. A framework mapping is an aid to reuse evidence; it is not a statement of compliance or equivalence.
+Read the [selection and maintenance policy](CONTRIBUTING.md). The [structured catalog](catalog/resources.json) is the source for the eight collections.
 
 ## Contribute
 
-Corrections and high-signal additions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). A proposed link without a use case, authoritative owner, and concrete practitioner action will not be accepted.
+Found a broken link, a superseded standard, or a resource that is stronger than one listed? [Open an issue](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/issues/new/choose) or submit a pull request with the source, its practical value, and what it replaces or adds.
 
-Licensed under [CC BY 4.0](LICENSE). External resources retain their own licenses and terms.
+Maintained by **François B. Arthanas / CyberProsAI**. Collection design draws inspiration from the task-based navigation of [Awesome Generative AI Guide](https://github.com/aishwaryanr/awesome-generative-ai-guide), the format coverage of [Awesome Responsible AI](https://github.com/AthenaCore/AwesomeResponsibleAI), and the tool categorization of [Awesome Production Machine Learning](https://github.com/EthicalML/awesome-production-machine-learning).
+
+Licensed under [CC BY 4.0](LICENSE). Linked works retain their own licenses. This is an educational resource collection; applicability and governance decisions remain context-dependent.
+

@@ -1,59 +1,38 @@
-name: Propose a resource
-description: Suggest a high-signal resource that meets the curation standard
+name: Suggest a must-have resource
+description: Propose one source with a concrete governance use case and distinctive value.
 title: "Resource: "
-labels: [resource]
 body:
-  - type: markdown
-    attributes:
-      value: Please read the curation policy first. A link without a concrete practitioner use will not be accepted.
   - type: input
-    id: url
+    id: source
     attributes:
-      label: Canonical URL
-      placeholder: https://
-    validations:
-      required: true
-  - type: input
-    id: publisher
-    attributes:
-      label: Publisher and version/date
+      label: Resource title and primary source URL
     validations:
       required: true
   - type: textarea
-    id: gap
+    id: use
     attributes:
-      label: Gap this fills
-      description: Which decision, control, test, or evidence gap does it address better than current entries?
+      label: What will a reader accomplish with it?
+      description: Name the decision, skill, evidence, or work product it supports.
     validations:
       required: true
   - type: textarea
-    id: action
+    id: distinction
     attributes:
-      label: Practitioner action
-      description: What should a practitioner do after using it?
-    validations:
-      required: true
-  - type: dropdown
-    id: access
-    attributes:
-      label: Access
-      options: [Free, Paid, Freemium, Mixed]
+      label: Why is this essential compared with what is already here?
+      description: Identify an existing alternative and any resource this should replace.
     validations:
       required: true
   - type: textarea
-    id: maintenance
-    attributes:
-      label: Maintenance and conflicts
-      description: Evidence it is maintained and any vendor, commercial, or other conflicts.
-    validations:
-      required: true
-  - type: checkboxes
     id: checks
     attributes:
-      label: Checks
-      options:
-        - label: I searched the catalog and existing issues for duplicates.
-          required: true
-        - label: I am not submitting an affiliate or sponsored link.
-          required: true
-
+      label: Version, access, and checks performed
+      description: Include the publisher, source status, costs or registration, review date, and any access restriction.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: Any affiliation or commercial interest?
+      placeholder: None, or describe the relationship.
+    validations:
+      required: true
