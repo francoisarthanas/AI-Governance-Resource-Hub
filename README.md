@@ -80,6 +80,6 @@ Resources are selected for practical value: understanding AI risk, making govern
 
 Found a broken link or a resource that deserves a place? [Suggest a resource or correction](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/issues/new/choose). See [CONTRIBUTING.md](CONTRIBUTING.md) for the selection criteria and contribution process.
 
-Maintained by **François B. Arthanas / CyberProsAI**.
+Maintained by **[François B. Arthanas](https://www.linkedin.com/in/francoisbarthanas/) / [CyberProsAI](https://www.cyberprosai.com/)**.
 
 Licensed under [CC BY 4.0](LICENSE). Linked resources retain their own licenses and terms.
