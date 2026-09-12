@@ -4,9 +4,7 @@
 
 Read the research that helps explain what governance needs to measure and prove. Distinguish empirical findings from proposals, benchmarks, and the authors' interpretations.
 
-**5 selected resources · Catalog reviewed 2026-09-12.**
-
-<!-- Generated from catalog/resources.json. Edit the catalog, then run python scripts/generate_catalog.py. -->
+**5 selected resources**
 
 - [MIT AI Risk Repository](#mit-risk-repository)
 - [AI Incident Database](#ai-incident-database)
@@ -22,19 +20,9 @@ Read the research that helps explain what governance needs to measure and prove.
 **Format:** Living database, taxonomies and research · **Access:** Free; data licensed CC BY 4.0  
 **For:** Risk assessors, researchers, evaluators and educators
 
-**Why it earns a place:** Provides a searchable inventory of AI risks tied to source literature, with causal and domain classifications that expose gaps in narrow risk registers.
+**Why it matters:** Provides a searchable inventory of AI risks tied to source literature, with causal and domain classifications that expose gaps in narrow risk registers.
 
-**Use it to:** Filter risks relevant to your use case, inspect the source evidence, and convert applicable risks into contextual risk statements.
-
-**Version / status:** Living resource; research first published 2024  
-**Reviewed:** 2026-09-12
-
-<details>
-<summary>Source review notes</summary>
-
-Official repository page inspected on 2026-09-12. Page lists a seven-domain taxonomy and current multi-agent risk subdomain. Counts vary within page sections, so omit headline counts. It explicitly does not supply risk likelihood or severity scores.
-
-</details>
+**Put it into practice:** Filter risks relevant to your use case, inspect the source evidence, and convert applicable risks into contextual risk statements. Assess likelihood and severity for your own context; the repository does not supply those scores.
 
 <a id="ai-incident-database"></a>
 
@@ -44,19 +32,9 @@ Official repository page inspected on 2026-09-12. Page lists a seven-domain taxo
 **Format:** Searchable incident reports and taxonomies · **Access:** Free to browse  
 **For:** Governance, risk, assurance and incident-response teams; educators
 
-**Why it earns a place:** Makes governance concrete through reported real-world failures, with linked reports that can inform risk workshops and incident exercises.
+**Why it matters:** Makes governance concrete through reported real-world failures, with linked reports that can inform risk workshops and incident exercises.
 
-**Use it to:** Select a relevant case, review its underlying reporting, and identify the failed decision, control, ownership and evidence assumptions.
-
-**Version / status:** Living database  
-**Reviewed:** 2026-09-12
-
-<details>
-<summary>Source review notes</summary>
-
-Official homepage and about page inspected on 2026-09-12; publisher and search applications verified. Entries are reported incidents, not uniformly adjudicated findings or a representative dataset of all AI deployments.
-
-</details>
+**Put it into practice:** Select a relevant case, inspect its original reporting, and distinguish reported facts from allegations before identifying possible control and ownership failures.
 
 <a id="internal-algorithmic-auditing"></a>
 
@@ -66,19 +44,9 @@ Official homepage and about page inspected on 2026-09-12; publisher and search a
 **Format:** Research paper and linked audit templates · **Access:** Free author manuscript  
 **For:** Governance leads, internal auditors and assurance reviewers
 
-**Why it earns a place:** Connects lifecycle decisions to a documented internal audit process, including the evidence an audit must leave behind.
+**Why it matters:** Connects lifecycle decisions to a documented internal audit process, including the evidence an audit must leave behind.
 
-**Use it to:** Use the SMACTR stages to plan one internal AI audit; identify the documents needed at each stage before testing begins.
-
-**Version / status:** 2020 conference paper; foundational method, not a current legal standard.  
-**Reviewed:** 2026-09-12
-
-<details>
-<summary>Source review notes</summary>
-
-Author manuscript record, abstract, conference acceptance and linked template reference reviewed. Linked templates were not separately inspected.
-
-</details>
+**Put it into practice:** Use the paper's audit framework to plan one internal AI audit and identify the documents needed at each stage before testing begins.
 
 <a id="model-cards"></a>
 
@@ -88,19 +56,9 @@ Author manuscript record, abstract, conference acceptance and linked template re
 **Format:** Research paper · **Access:** Free author manuscript  
 **For:** Model reviewers, procurement teams and technical owners
 
-**Why it earns a place:** Establishes a practical model documentation format covering intended use, evaluation conditions and performance across relevant groups.
+**Why it matters:** Establishes a practical model documentation format covering intended use, evaluation conditions and performance across relevant groups.
 
-**Use it to:** Ask a supplier for intended uses, exclusions, evaluation methods and disaggregated results; record which facts still need independent evidence. Use the current [Hugging Face model-card guide](https://huggingface.co/docs/hub/model-cards) for implementation.
-
-**Version / status:** 2019 conference paper; arXiv v2, 14 January 2019.  
-**Reviewed:** 2026-09-12
-
-<details>
-<summary>Source review notes</summary>
-
-Author manuscript, version, conference record and documentation scope reviewed, along with the current Hugging Face implementation guide. A model card does not document the entire deployed agent.
-
-</details>
+**Put it into practice:** Ask a supplier for intended uses, exclusions, evaluation methods and disaggregated results; record which facts still need independent evidence. Use the current [Hugging Face model-card guide](https://huggingface.co/docs/hub/model-cards) for implementation.
 
 <a id="datasheets-for-datasets"></a>
 
@@ -110,16 +68,6 @@ Author manuscript, version, conference record and documentation scope reviewed, 
 **Format:** Research paper and documentation questions · **Access:** Free author manuscript  
 **For:** Data owners, privacy teams and governance reviewers
 
-**Why it earns a place:** Makes data provenance, collection choices, intended uses and limitations visible before a dataset is reused.
+**Why it matters:** Makes data provenance, collection choices, intended uses and limitations visible before a dataset is reused.
 
-**Use it to:** Apply its questions to one training or evaluation dataset, then adapt them to a retrieval corpus and identify missing provenance. See the practical [dataset-card guide](https://huggingface.co/docs/hub/datasets-cards).
-
-**Version / status:** 2021 published paper; arXiv v8, 1 December 2021.  
-**Reviewed:** 2026-09-12
-
-<details>
-<summary>Source review notes</summary>
-
-Author manuscript record, publication note and dataset documentation scope reviewed. Applying it to retrieval corpora is this hub's suggested adaptation.
-
-</details>
+**Put it into practice:** Apply its questions to one training or evaluation dataset, then adapt them to a retrieval corpus and identify missing provenance. See the practical [dataset-card guide](https://huggingface.co/docs/hub/datasets-cards).

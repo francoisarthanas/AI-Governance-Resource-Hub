@@ -2,18 +2,16 @@
 
 [← Resource hub](../README.md)
 
-Choose the path that matches your next task. These are suggested learning sequences, not certifications or universal compliance checklists. Reading and reviewing the references requires no coding; running the technical tools may.
+Choose the path that matches your next task. The reading paths require no coding; technical exercises identify the tools and skills involved.
 
 ## If you have one hour
 
-Use the hour to orient yourself and record questions, rather than trying to finish every source.
+Use these suggested study time boxes to get oriented and identify the questions that matter for one AI use case.
 
 1. **10 minutes:** Watch the [NIST AI RMF explainer](LEARNING.md#nist-rmf-video) and identify the four functions.
 2. **15 minutes:** Skim the executive summary and four dimensions of the [IMDA agentic framework](AGENTIC.md#imda-agentic-framework).
 3. **15 minutes:** Choose one relevant case in the [AI Incident Database](RESEARCH.md#ai-incident-database) and inspect the underlying report.
 4. **20 minutes:** Write down the system's purpose, affected people, accountable owner, allowed actions, required approvals, and evidence still missing.
-
-The time boxes are suggested study allocations, not source runtimes.
 
 ## Learn the foundations
 
@@ -29,7 +27,7 @@ For newcomers, career changers, and colleagues who need a shared vocabulary.
 
 **Finish with:** a one-page explanation of a use case, its affected people, its main risks, and the evidence you would request.
 
-For readers pursuing the professional credential, [IAPP AIGP training](LEARNING.md#aigp-training) is a paid structured option. It is not a prerequisite for using this hub.
+For readers pursuing a professional credential, [IAPP AIGP training](LEARNING.md#aigp-training) offers a paid, structured curriculum.
 
 ## Build a governance program
 
@@ -45,7 +43,7 @@ For GRC teams, governance leads, auditors, and risk owners.
 
 **Finish with:** a clear intake-to-review process, assigned owners, and a list of evidence needed for one deployment decision. The UK and Canadian examples are reusable models; their mandates do not automatically apply outside their stated scope.
 
-Use [VerifyWise](TOOLS.md#verifywise) if you need a workspace to organize this information. The governance decisions still require accountable people.
+Use [VerifyWise](TOOLS.md#verifywise) if you need a workspace to organize this information.
 
 ## Review an AI agent
 
@@ -86,4 +84,3 @@ For cybersecurity practitioners and reviewers working with technical teams.
 | Review a supplier's model documentation | [Model Cards](RESEARCH.md#model-cards) | A list of intended uses, exclusions, evaluation gaps, and follow-up evidence requests |
 
 Choose an exercise that fits your access and skills. The goal is a better governance judgment backed by evidence.
-

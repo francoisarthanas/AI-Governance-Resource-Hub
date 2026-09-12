@@ -37,7 +37,7 @@ def check(url: str, timeout: float) -> dict:
     result = {"url": url, "status": "network", "http_status": None, "final_url": None, "detail": ""}
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "AI-Governance-Resource-Hub-Link-Checker/2.0", "Range": "bytes=0-1023"},
+        headers={"User-Agent": "AI-Governance-Resource-Hub-Link-Checker", "Range": "bytes=0-1023"},
         method="GET",
     )
     try:
@@ -59,7 +59,7 @@ def markdown_report(report: dict) -> str:
     lines = [
         "# External link report", "", f'Checked: {report["checked_at"]}', "",
         "HTTP reachability is not a review of content, accuracy, suitability, or current version. A successful response can still be a login screen or a soft 404.", "",
-        "401/403/429 and other access restrictions remain unverified. Network errors and other HTTP failures need review. This report never updates catalog review dates or removes resources.", "",
+        "Access restrictions, network errors, and other HTTP failures need manual review. This check does not change the catalog.", "",
         "| Reachable | Restricted | Network | 404 / 410 | Other HTTP review |",
         "| ---: | ---: | ---: | ---: | ---: |",
         f'| {counts["ok"]} | {counts["restricted"]} | {counts["network"]} | {counts["dead"]} | {counts["review"]} |', "",

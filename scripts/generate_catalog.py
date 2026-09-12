@@ -48,14 +48,13 @@ def escape_label(value: str) -> str:
     return value.replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]")
 
 
-def render_category(category: str, resources: list[dict], reviewed: str) -> str:
+def render_category(category: str, resources: list[dict]) -> str:
     _, title, intro = CATEGORIES[category]
     entries = [item for item in resources if item["category"] == category]
     lines = [
         f"# {title}", "", "[← Resource hub](../README.md) · [Start here](START-HERE.md)", "",
         intro, "",
-        f"**{len(entries)} selected resources · Catalog reviewed {reviewed}.**", "",
-        "<!-- Generated from catalog/resources.json. Edit the catalog, then run python scripts/generate_catalog.py. -->", "",
+        f"**{len(entries)} selected resources**", "",
     ]
     lines.extend(f'- [{escape_label(item["title"])}](#{item["id"]})' for item in entries)
     lines.append("")
@@ -65,26 +64,22 @@ def render_category(category: str, resources: list[dict], reviewed: str) -> str:
             f'**Publisher:** {item["publisher"]}  ',
             f'**Format:** {item["format"]} · **Access:** {item["access"]}  ',
             f'**For:** {item["audience"]}', "",
-            f'**Why it earns a place:** {item["why"]}', "",
-            f'**Use it to:** {item["use"]}', "",
-            f'**Version / status:** {item["version"]}  ',
-            f'**Reviewed:** {item["last_reviewed"]}', "",
-            "<details>", "<summary>Source review notes</summary>", "",
-            item["verification_note"], "", "</details>", "",
+            f'**Why it matters:** {item["why"]}', "",
+            f'**Put it into practice:** {item["use"]}', "",
         ])
     return "\n".join(lines).rstrip() + "\n"
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=ROOT, help="Repository root (also useful for fixture checks)")
+    parser.add_argument("--root", type=Path, default=ROOT, help="Repository root")
     parser.add_argument("--check", action="store_true", help="Report drift without writing files")
     args = parser.parse_args()
     catalog = json.loads((args.root / "catalog/resources.json").read_text(encoding="utf-8"))
     changed = []
     for category, (filename, _, _) in CATEGORIES.items():
         path = args.root / "docs" / filename
-        expected = render_category(category, catalog["resources"], catalog["last_reviewed"])
+        expected = render_category(category, catalog["resources"])
         actual = path.read_text(encoding="utf-8") if path.exists() else None
         if actual != expected:
             changed.append(f"docs/{filename}")

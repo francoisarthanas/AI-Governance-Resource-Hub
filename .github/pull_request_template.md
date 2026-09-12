@@ -2,17 +2,18 @@
 
 What concrete governance decision or task does this change support?
 
-## Selection and evidence
+## Resource quality
 
-- Primary source and substantive checks performed:
+- Primary source:
+- Intended audience:
 - Unique contribution compared with the strongest existing resource:
-- Version/status and access limitations:
+- Access costs or requirements:
 - Existing entry replaced or removed, if applicable:
 - Any affiliation or commercial interest:
 
 ## Validation
 
-- [ ] Edited the catalog and regenerated category pages.
+- [ ] Regenerated category pages if the catalog changed.
 - [ ] Ran `python scripts/validate.py` and `python scripts/generate_catalog.py --check`.
-- [ ] Review notes and dates reflect checks actually performed.
+- [ ] Checked primary sources, descriptions, and access details for resource changes.
 - [ ] Updated README or Start here links if this change affects them.

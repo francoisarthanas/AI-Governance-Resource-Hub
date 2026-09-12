@@ -1,38 +1,31 @@
-name: Suggest a must-have resource
-description: Propose one source with a concrete governance use case and distinctive value.
-title: "Resource: "
+name: Suggest a resource or correction
+description: Recommend a valuable source, fix a broken link, or correct a description.
+title: "Suggestion: "
 body:
   - type: input
     id: source
     attributes:
-      label: Resource title and primary source URL
+      label: Resource title and URL
     validations:
       required: true
   - type: textarea
     id: use
     attributes:
-      label: What will a reader accomplish with it?
-      description: Name the decision, skill, evidence, or work product it supports.
+      label: What should be added or corrected, and why?
+      description: Describe the problem or explain what a reader can accomplish with the new resource.
     validations:
       required: true
   - type: textarea
-    id: distinction
+    id: access
     attributes:
-      label: Why is this essential compared with what is already here?
-      description: Identify an existing alternative and any resource this should replace.
+      label: Audience and access for a new resource
+      description: Include the publisher, intended audience, costs or requirements, and what it adds to the collection.
     validations:
-      required: true
-  - type: textarea
-    id: checks
-    attributes:
-      label: Version, access, and checks performed
-      description: Include the publisher, source status, costs or registration, review date, and any access restriction.
-    validations:
-      required: true
+      required: false
   - type: input
     id: affiliation
     attributes:
       label: Any affiliation or commercial interest?
-      placeholder: None, or describe the relationship.
+      description: Disclose a relationship with the resource or publisher when applicable.
     validations:
-      required: true
+      required: false

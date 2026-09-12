@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-from datetime import date
 import html
 import json
 from pathlib import Path
@@ -18,7 +17,7 @@ from generate_catalog import CATEGORIES
 ROOT = Path(__file__).resolve().parents[1]
 RESOURCE_FIELDS = {
     "id", "title", "url", "publisher", "category", "format", "access", "audience",
-    "why", "use", "version", "verification_note", "last_reviewed",
+    "why", "use",
 }
 REQUIRED_FILES = {
     "README.md", "CONTRIBUTING.md", "LICENSE", "catalog/resources.json", "docs/START-HERE.md",
@@ -139,15 +138,6 @@ def canonical_url(url: str) -> str:
     return urlunsplit((parsed.scheme.lower(), authority, parsed.path.rstrip("/"), parsed.query, ""))
 
 
-def valid_date(value: object) -> bool:
-    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
-        return False
-    try:
-        return date.fromisoformat(value) <= date.today()
-    except ValueError:
-        return False
-
-
 def validate_catalog(root: Path, errors: list[str]) -> int:
     try:
         data = json.loads((root / "catalog/resources.json").read_text(encoding="utf-8"))
@@ -157,15 +147,18 @@ def validate_catalog(root: Path, errors: list[str]) -> int:
     if not isinstance(data, dict):
         errors.append("catalog must be an object")
         return 0
-    if data.get("schema_version") != "2.0":
-        errors.append('catalog schema_version must be "2.0"')
-    if not valid_date(data.get("last_reviewed")):
-        errors.append("catalog last_reviewed must be a real YYYY-MM-DD date no later than today")
+    if data.get("schema_version") != "3.0":
+        errors.append('catalog schema_version must be "3.0"')
+    if not isinstance(data.get("description"), str) or not data["description"].strip():
+        errors.append("catalog description must be a non-empty string")
+    extras = data.keys() - {"schema_version", "description", "resources"}
+    if extras:
+        errors.append(f"catalog has unsupported fields {sorted(extras)}")
     resources = data.get("resources")
     if not isinstance(resources, list) or not resources:
         errors.append("catalog resources must be a non-empty list")
         return 0
-    ids, urls = set(), set()
+    ids, urls, categories = set(), set(), set()
     for number, item in enumerate(resources, start=1):
         label = f"resource {number}"
         if not isinstance(item, dict):
@@ -190,10 +183,8 @@ def validate_catalog(root: Path, errors: list[str]) -> int:
         category = item.get("category")
         if not isinstance(category, str) or category not in CATEGORIES:
             errors.append(f"{label}: unknown category {category!r}")
-        if not valid_date(item.get("last_reviewed")):
-            errors.append(f"{label}: last_reviewed must be a real YYYY-MM-DD date no later than today")
-        elif valid_date(data.get("last_reviewed")) and item["last_reviewed"] > data["last_reviewed"]:
-            errors.append(f"{label}: review date is later than catalog last_reviewed")
+        else:
+            categories.add(category)
         url = item.get("url")
         try:
             parsed = urlsplit(url) if isinstance(url, str) else None
@@ -217,6 +208,8 @@ def validate_catalog(root: Path, errors: list[str]) -> int:
                     targets, _ = markdown_targets(section)
                     if url not in targets:
                         errors.append(f"{label}: official URL missing from its category-page section")
+    for category in CATEGORIES.keys() - categories:
+        errors.append(f"category {category!r} has no resources")
     return len(resources)
 
 

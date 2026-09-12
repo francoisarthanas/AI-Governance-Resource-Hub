@@ -2,8 +2,6 @@
 
 This repository contains a curated resource catalog and maintenance scripts. Please do not include confidential information, credentials, personal data, or exploit details affecting a live third party in an issue.
 
-For a broken or malicious external link, compromised dependency/workflow reference, or other repository security concern, use GitHub's private vulnerability reporting if enabled. Otherwise contact the repository owner privately through the contact method on the owner's GitHub profile. Include the affected file/link, observed behavior, and safe reproduction details.
+Report broken or suspicious links through a [resource correction](https://github.com/francoisarthanas/AI-Governance-Resource-Hub/issues/new?template=resource.yml). Include the affected URL and a safe description of the problem.
 
-Public corrections for inaccurate security guidance are welcome when disclosure does not create additional risk.
-
-
+For sensitive vulnerabilities in this repository, use GitHub's private vulnerability reporting when available. For vulnerabilities in a linked project, follow that project's security policy. Avoid publishing details that expose a live system to harm.
