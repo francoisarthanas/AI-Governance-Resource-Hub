@@ -69,7 +69,7 @@ Verify federal/provincial privacy, human-rights, consumer, employment, sector, a
 - [Australian Government AI policy hub](https://www.digital.gov.au/policy/ai)
 - [AI Technical Standard](https://www.digital.gov.au/policy/ai/AI-technical-standard)
 - [Agentic AI Addendum](https://www.digital.gov.au/policy/ai/agentic-ai-addendum-introduction)
-- [Australian AI Ethics Principles](https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-framework/australias-ai-ethics-principles)
+- [Australian AI Ethics Principles](https://www.industry.gov.au/publications/australias-ai-ethics-principles)
 
 Check Commonwealth/state privacy, discrimination, consumer, online safety, employment, records, security, and sector rules.
 
@@ -94,3 +94,4 @@ Check Commonwealth/state privacy, discrimination, consumer, online safety, emplo
 - Preserve the source and reasoning that supported each decision.
 
 Never represent an automated compliance checker, crosswalk, certification, or vendor platform as legal advice.
+
