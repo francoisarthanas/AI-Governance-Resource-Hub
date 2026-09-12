@@ -1,0 +1,3 @@
+evidence_id,system_id,control_or_requirement,title,artifact_type,version_or_period,owner,storage_link,classification,created_date,expiry_or_review_date,integrity_or_approval,status
+EVD-001,SYS-001,GOV-01,Example approval record,decision record,v1,business-owner,REPLACE_WITH_LINK,internal,YYYY-MM-DD,YYYY-MM-DD,approved,draft
+

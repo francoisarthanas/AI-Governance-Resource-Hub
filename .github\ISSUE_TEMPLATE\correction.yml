@@ -1,0 +1,32 @@
+name: Report a correction
+description: Report a broken, superseded, inaccurate, or unsafe entry
+title: "Correction: "
+labels: [correction]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: File, entry, or URL
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Problem type
+      options: [Broken link, Superseded version, Factual error, Unsafe guidance, Licensing or attribution, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Correction and authoritative evidence
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Practitioner impact
+      description: Explain urgency or the decision this could affect.
+    validations:
+      required: true
+

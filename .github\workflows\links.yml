@@ -1,0 +1,27 @@
+name: Link check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose --no-progress --max-retries 3
+            --accept 200,204,206,301,302,303,307,308,401,403,429
+            './**/*.md' './catalog/resources.json'
+          fail: true
+
